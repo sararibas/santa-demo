@@ -1,0 +1,38 @@
+.list {
+    border-radius:10px;
+    input[type="radio"]{
+        position:absolute;
+        width:1px;
+        height:1px;
+        padding:0;
+        margin:-1px;
+        overflow:hidden;
+        clip:rect(0,0,0,0);
+        border:0;
+    }
+    label{
+        cursor:pointer;
+        transition:all 00.2s ease;
+        user-select:none;
+        display:block;
+    }
+}
+.wrapper {
+    background:white;
+    .list-group-item.active,.list-group-item:hover{
+        background-color:#eee;
+        border:var(--bs-list-group-border-width) solid var(--bs-christmas-green);
+        color:black;
+        transition:all 00.2s ease;
+    }
+}
+label:focus{
+    outline:3px solid var(--bs-christmas-green);
+    outline-offset:1px;
+    border-radius:20px;
+    transform:scale(1.02);
+    transition: transform 0.15s ease, outline 0.15s ease;
+}
+.list legend{
+    font-weight:bold;
+}

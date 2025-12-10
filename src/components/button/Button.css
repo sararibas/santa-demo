@@ -1,0 +1,19 @@
+#submit{
+    width:100%;
+    background-color:var(--bs-christmas-green);
+    border-color:var(--bs-christmas-green);
+    border-radius:100px;
+        &:hover{
+            background-color:var(--bs-christmas-dark-green);
+            border-color:var(--bs-christmas-dark-green);
+        }
+        &:active{
+            transition: tranform 0.1s ease;
+        }
+        &:focus{
+            outline:3px solid var(--bs-christmas-green);
+            outline-offset:1px;
+            transform:scale(1.02);
+            transition: transform 0.15s ease, outline 0.15s ease;
+        }
+}
