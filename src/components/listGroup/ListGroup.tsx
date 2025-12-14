@@ -6,16 +6,19 @@ interface ListGroupProps {
   setUserAnswer: (value: string) => void;
   disabled: boolean;
   isSubmitted: boolean;
+  items: string[];
+  legend: string;
 }
 
 function ListGroup({
   selected,
   setUserAnswer,
   disabled,
+  items,
+  legend,
   isSubmitted,
 }: ListGroupProps) {
   const [selectedItem, setSelectedItem] = useState("");
-  const locations = ["North Pole", "Caribbean", "Sahara Desert"];
   const handleSelect = (item: string) => {
     setSelectedItem(item);
     setUserAnswer(item);
@@ -24,12 +27,12 @@ function ListGroup({
   return (
     <>
       <fieldset className="list">
-        <legend className="mb-2">Where would you look for Santa Claus?</legend>
+        <legend className="mb-2">{legend}</legend>
         <ul
           className="list-group mb-3 p-3 border border-light-subtle"
           aria-label="location options"
         >
-          {locations.map((item) => (
+          {items.map((item) => (
             <li className="list-group">
               <label
                 key={item}

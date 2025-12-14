@@ -5,6 +5,7 @@ import Alert from "./components/alert/Alert";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
+  const locations = ["North Pole", "Caribbean", "Sahara Desert"];
   const [userAnswer, setUserAnswer] = useState("");
   const [alertType, setAlertType] = useState<"success" | "danger" | null>(null);
   const [alertMessage, setAlertMessage] = useState<string>("");
@@ -36,6 +37,8 @@ function App() {
         onSubmit={handleSubmit}
       >
         <ListGroup
+          items={locations}
+          legend="Where would you look for Santa Claus?"
           selected={userAnswer}
           setUserAnswer={setUserAnswer}
           disabled={disabled}
