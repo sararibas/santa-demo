@@ -2,8 +2,7 @@
 
 :root{
     --bs-navy:rgb(50,60,86);
-    --bs-christmas-green:rgb(55,118,107);
-    --bs-christmas-dark-green:rgb(45,90,86);
+    --bs-navy-dark: rgb(38,46,70);
 }
 .content{
     background:var(--bs-gray-100);
